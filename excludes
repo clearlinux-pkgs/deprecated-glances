@@ -1,2 +1,11 @@
 # This file contains the output files that need %exclude. Full path
 # names, one per line.
+/usr/bin/glances
+/usr/share/doc/glances/AUTHORS
+/usr/share/doc/glances/CONTRIBUTING.md
+/usr/share/doc/glances/COPYING
+/usr/share/doc/glances/NEWS
+/usr/share/doc/glances/README.rst
+/usr/share/doc/glances/glances.conf
+/usr/share/man/man1/glances.1
+

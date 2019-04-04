@@ -4,7 +4,7 @@
 #
 Name     : deprecated-glances
 Version  : 2.11
-Release  : 22
+Release  : 23
 URL      : https://github.com/nicolargo/glances/archive/v2.11.tar.gz
 Source0  : https://github.com/nicolargo/glances/archive/v2.11.tar.gz
 Summary  : No detailed summary available
@@ -88,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554320436
+export SOURCE_DATE_EPOCH=1554341364
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -104,16 +104,16 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/glances
+%exclude /usr/bin/glances
 
 %files doc
 %defattr(0644,root,root,0755)
-/usr/share/doc/glances/AUTHORS
-/usr/share/doc/glances/CONTRIBUTING.md
-/usr/share/doc/glances/COPYING
-/usr/share/doc/glances/NEWS
-/usr/share/doc/glances/README.rst
-/usr/share/doc/glances/glances.conf
+%exclude /usr/share/doc/glances/AUTHORS
+%exclude /usr/share/doc/glances/CONTRIBUTING.md
+%exclude /usr/share/doc/glances/COPYING
+%exclude /usr/share/doc/glances/NEWS
+%exclude /usr/share/doc/glances/README.rst
+%exclude /usr/share/doc/glances/glances.conf
 
 %files legacypython
 %defattr(-,root,root,-)
@@ -125,7 +125,7 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files man
 %defattr(0644,root,root,0755)
-/usr/share/man/man1/glances.1
+%exclude /usr/share/man/man1/glances.1
 
 %files python
 %defattr(-,root,root,-)
